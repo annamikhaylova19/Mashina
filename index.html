@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="afaf.css">
+    <title>Машины</title>
+</head>
+
+<body>
+    <div class="navig">
+        <div class="navigation">
+            <a href="index.html"
+                style="border-left: 2px solid #FCCD04; border-right: 2px solid #FCCD04; background-color: #FFB48F; padding: 24px;">Главная</a>
+            <a href="swyaz.html" style="border-right: 2px solid #FCCD04;">Обратная связь</a>
+            <a href="about.html" style="border-right: 2px solid #FCCD04;">Об авторе</a>
+            <a href="cars.html" style="border-right: 2px solid #FCCD04;">Машины</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Добро пожаловать! Мы рады вас приветствовать на сайте машин</h1>
+        <p>
+            <button onclick="zoomIn()">Увеличить</button>
+            <button onclick="zoomOut()">Уменьшить</button>
+        </p>
+        <img id="car-image" src="car1.jpeg" alt="Haval New F7x" class="car-image">
+        <img src="car2.jpeg" alt="EXEED TXL New" class="car-image">
+        <img src="car3.jpeg" alt="Chery Tiggo 7 Pro" class="car-image">
+        <div><video src="1.mp4" autoplay controls width=auto height="300" poster="poster.jpg" alt="Видео машины"
+                class="video"></video>
+        </div>
+    </div>
+
+    <script>
+        var scaleFactor = 1.0;
+        var carImage = document.getElementById("car-image");
+
+        function zoomIn() {
+            scaleFactor += 0.1;
+            carImage.style.transform = "scale(" + scaleFactor + ")";
+        }
+
+        function zoomOut() {
+            scaleFactor -= 0.1;
+            carImage.style.transform = "scale(" + scaleFactor + ")";
+        }
+
+
+    </script>
+</body>
+
+</html>
